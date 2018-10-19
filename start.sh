@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker build -t myansible .
+docker build -t testcentos .
 
 ret=$?
 

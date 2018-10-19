@@ -1,8 +1,4 @@
 version: '2'
 services:
-    ansiblecontroller:
-      image: myansible
-    target1:
-      image: myansible
-      depends_on:
-      - ansiblecontroller
+  testcontroller:
+    image: testcentos

@@ -1,0 +1,10 @@
+version: '2'
+services:
+    ansiblecontroller:
+        image: myansible
+        restart: always
+    target1:
+        image: myansible
+        restart: always
+        depends_on:
+          - ansiblecontroller

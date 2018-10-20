@@ -1,3 +1,3 @@
-docker-compose-example
-======================
+ansible-absolute-beginner
+=========================
 

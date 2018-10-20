@@ -4,15 +4,19 @@ services:
         image: ansibletemplate
         restart: always
         entrypoint: 
-        - /bin/bash
-        - -c 
-        - "trap : TERM INT; sleep infinity & wait"
+        - /usr/sbin/sshd 
+        - -D 
+        volumes:
+            - ./data/controller/logs:/opt/logs
+            - ./data/controller/store:/store
     target1:
         image: ansibletemplate
         restart: always
         entrypoint: 
-        - /bin/bash
-        - -c 
-        - "trap : TERM INT; sleep infinity & wait"
+        - /usr/sbin/sshd 
+        - -D 
+        volumes:
+            - ./data/target/logs:/opt/logs
+            - ./data/target/store:/store
         depends_on:
           - ansiblecontroller

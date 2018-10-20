@@ -19,6 +19,8 @@ RUN ./create-user.sh
 
 ADD docker-entrypoint.sh /docker-entrypoint.sh
 
+EXPOSE 22
+
 # ADD main.py /main.py
 
 # ENTRYPOINT  ["/docker-entrypoint.sh"]

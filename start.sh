@@ -2,6 +2,8 @@
 
 docker build -t ansibletemplate .
 
+ret=$?
+
 if [ "$ret" == "0" ]
 then
     echo "Build succeded..."

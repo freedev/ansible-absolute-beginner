@@ -1,4 +1,18 @@
 version: '2'
 services:
-  testcontroller:
-    image: testcentos
+    ansiblecontroller:
+        image: ansibletemplate
+        restart: always
+        entrypoint: 
+        - /bin/bash
+        - -c 
+        - "trap : TERM INT; sleep infinity & wait"
+    target1:
+        image: ansibletemplate
+        restart: always
+        entrypoint: 
+        - /bin/bash
+        - -c 
+        - "trap : TERM INT; sleep infinity & wait"
+        depends_on:
+          - ansiblecontroller

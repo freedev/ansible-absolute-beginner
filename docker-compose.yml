@@ -16,7 +16,7 @@ services:
         - /usr/sbin/sshd 
         - -D 
         volumes:
-            - ./data/target/logs:/opt/logs
-            - ./data/target/store:/store
+            - ./data/target1/logs:/opt/logs
+            - ./data/target1/store:/store
         depends_on:
           - ansiblecontroller
